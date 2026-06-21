@@ -5,7 +5,6 @@ class Zone {
   final int complaintCount;
   final double resolutionRate;
   final String trend;
-  final int wardCount;
 
   Zone({
     required this.id,
@@ -14,7 +13,6 @@ class Zone {
     required this.complaintCount,
     required this.resolutionRate,
     required this.trend,
-    required this.wardCount,
   });
 
   factory Zone.fromJson(Map<String, dynamic> json) {
@@ -25,7 +23,6 @@ class Zone {
       complaintCount: json['complaintCount'] ?? 0,
       resolutionRate: (json['resolutionRate'] ?? 0).toDouble(),
       trend: json['trend'] ?? 'stable',
-      wardCount: json['wardCount'] ?? 0,
     );
   }
 }

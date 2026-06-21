@@ -20,6 +20,7 @@ class CityBrainApp extends StatelessWidget {
       getPages: AppRoutes.pages,
       initialRoute: AppRoutes.splash,
       defaultTransition: Transition.cupertino,
+      debugShowCheckedModeBanner: false,
     );
   }
 }

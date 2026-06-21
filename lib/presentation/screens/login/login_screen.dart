@@ -96,11 +96,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                     const SizedBox(height: 32),
-
                     TextField(
                       controller: _emailController,
                       decoration: InputDecoration(
                         labelText: 'Email Address',
+                        hintText: 'admin@iccc.gov.in',
                         prefixIcon: const Icon(Icons.email_outlined),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
@@ -108,7 +108,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                     const SizedBox(height: 16),
-
                     TextField(
                       controller: _passwordController,
                       obscureText: _obscurePassword,
@@ -131,7 +130,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                     const SizedBox(height: 24),
-
                     Container(
                       width: double.infinity,
                       decoration: BoxDecoration(

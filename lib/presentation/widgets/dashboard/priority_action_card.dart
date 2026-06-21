@@ -82,10 +82,7 @@ class PriorityActionCard extends StatelessWidget {
                   ],
                 ),
               ),
-              Icon(
-                Icons.arrow_forward,
-                color: color,
-              ),
+              Icon(Icons.arrow_forward, color: color),
             ],
           ),
         ),

@@ -100,7 +100,7 @@ class AppTheme {
       primaryColor: AppColors.primaryBlue,
       scaffoldBackgroundColor: AppColors.black,
       appBarTheme: AppBarTheme(
-        backgroundColor: Color(0xFF1a1a1a),
+        backgroundColor: const Color(0xFF1a1a1a),
         foregroundColor: AppColors.white,
         elevation: 0,
       ),

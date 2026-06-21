@@ -88,7 +88,6 @@ class _DashboardScreenState extends State<DashboardScreen>
               ),
             ),
           ),
-
           SliverAppBar(
             pinned: true,
             backgroundColor: AppColors.white,
@@ -102,12 +101,12 @@ class _DashboardScreenState extends State<DashboardScreen>
                 indicatorColor: AppColors.primaryBlue,
                 labelColor: AppColors.primaryBlue,
                 unselectedLabelColor: AppColors.grey500,
-                tabs: [
-                  const Tab(text: 'Priority'),
-                  const Tab(text: 'Health'),
-                  const Tab(text: 'Departments'),
-                  const Tab(text: 'Zones'),
-                  const Tab(text: 'Analytics'),
+                tabs: const [
+                  Tab(text: 'Priority'),
+                  Tab(text: 'Health'),
+                  Tab(text: 'Departments'),
+                  Tab(text: 'Zones'),
+                  Tab(text: 'Analytics'),
                 ],
                 onTap: (index) {
                   setState(() {
@@ -117,7 +116,6 @@ class _DashboardScreenState extends State<DashboardScreen>
               ),
             ),
           ),
-
           SliverFillRemaining(
             child: TabBarView(
               controller: _tabController,
@@ -139,21 +137,21 @@ class _DashboardScreenState extends State<DashboardScreen>
     return SingleChildScrollView(
       padding: EdgeInsets.all(isMobile ? 12 : 16),
       child: Column(
-        children: [
+        children: const [
           PriorityActionCard(
             title: 'East Zone Complaint Backlog',
             description: 'Increased by 30%',
             severity: 'critical',
             icon: Icons.warning_amber,
           ),
-          const SizedBox(height: 12),
+          SizedBox(height: 12),
           PriorityActionCard(
             title: 'Engineering Project Delay',
             description: '15 days behind schedule',
             severity: 'warning',
             icon: Icons.engineering,
           ),
-          const SizedBox(height: 12),
+          SizedBox(height: 12),
           PriorityActionCard(
             title: 'Revenue Collection Below Target',
             description: 'Central Zone - 25% shortfall',
@@ -168,8 +166,8 @@ class _DashboardScreenState extends State<DashboardScreen>
   Widget _buildHealthTab(bool isMobile, bool isTablet) {
     return SingleChildScrollView(
       padding: EdgeInsets.all(isMobile ? 12 : 16),
-      child: Column(
-        children: const [
+      child: const Column(
+        children: [
           CityHealthCard(),
         ],
       ),
@@ -185,7 +183,7 @@ class _DashboardScreenState extends State<DashboardScreen>
         crossAxisSpacing: 12,
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
-        children: [
+        children: const [
           DepartmentRankingCard(
             name: 'SWMS',
             score: 87,
@@ -296,7 +294,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
-                    'Trend Analysis',
+                    'Trend Analysis - Last 7 Days',
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
@@ -310,7 +308,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: const Center(
-                      child: Text('Chart Placeholder'),
+                      child: Text('Chart Integration Ready'),
                     ),
                   ),
                 ],

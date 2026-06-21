@@ -6,7 +6,6 @@ class CityHealth {
   final double grievanceScore;
   final double revenueScore;
   final double rainfallScore;
-  final String lastUpdated;
 
   CityHealth({
     required this.overallScore,
@@ -16,7 +15,6 @@ class CityHealth {
     required this.grievanceScore,
     required this.revenueScore,
     required this.rainfallScore,
-    required this.lastUpdated,
   });
 
   factory CityHealth.fromJson(Map<String, dynamic> json) {
@@ -28,7 +26,6 @@ class CityHealth {
       grievanceScore: (json['grievanceScore'] ?? 0).toDouble(),
       revenueScore: (json['revenueScore'] ?? 0).toDouble(),
       rainfallScore: (json['rainfallScore'] ?? 0).toDouble(),
-      lastUpdated: json['lastUpdated'] ?? '',
     );
   }
 }
